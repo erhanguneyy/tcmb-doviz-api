@@ -78,7 +78,6 @@ async function getOldDateAllCurrency(year, month, day) {
 async function getOldDateCurrency(year, month, day, tcmbCurrencyCode) {
     const allCurrency = await getOldDateAllCurrency(year, month, day)
     const result = allCurrency.find(({ currencyCode }) => currencyCode === tcmbCurrencyCode);
-    console.log(result);
     return result
 }
 
