@@ -22,7 +22,7 @@ const result = await tcmbCurrency.getOldDateAllCurrency('2024','01','05')
 console.log(result);
 
 //05.01.2024 Tarihinde yayınlanmış USD kur bilgilerini getirir.
-const result = await tcmbCurrency.getOldDateAllCurrency('2024','01','05','USD')
+const result = await tcmbCurrency.getOldDateCurrency('2024','01','05','USD')
 console.log(result);
 
 ```
