@@ -1,6 +1,6 @@
 {
   "name": "tcmb-currency",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Türkiye Cumhuriyeti Merkez Bankası tarafından açıklanmış olan güncel döviz kurlarını bu kütüphane ile çekebilirsiniz.",
   "main": "index.js",
   "scripts": {
