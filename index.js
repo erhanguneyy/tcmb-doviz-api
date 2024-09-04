@@ -2,6 +2,7 @@ const axios = require('axios')
 var parseString = require('xml2js').parseString;
 var fs = require('fs');
 
+
 async function getAllCurrency() {
     let config = {
         method: 'get',
