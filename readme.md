@@ -25,4 +25,12 @@ console.log(result);
 const result = await tcmbCurrency.getOldDateCurrency('2024','01','05','USD')
 console.log(result);
 
+// USD cinsinden 100TL tutarının güncel alış ve satış değerlerini hesaplar
+const result = await convertCurrency('USD', 100);
+console.log(result);
+
+// 05.01.2024 tarihinde yayınlanmış USD kuru üzerinden 100TK tutarının alış ve satış değerlerini hesaplar
+const result = await convertOldDateCurrency('2024', '01', '05', 'USD', 100);
+console.log(result);
+
 ```

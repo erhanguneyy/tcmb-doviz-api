@@ -60,7 +60,7 @@ async function getOldDateAllCurrency(year, month, day) {
 
             for (let i = 0; i < result.Tarih_Date.Currency.length; i++) {
                 allCurrency.push({
-                    tarih: result.Tarih_Date.$.Tarih,
+                    date: result.Tarih_Date.$.Tarih,
                     currencyCode: result.Tarih_Date.Currency[i].$.CurrencyCode,
                     currencyName: result.Tarih_Date.Currency[i].CurrencyName[0],
                     buying: Number(result.Tarih_Date.Currency[i].ForexBuying),
@@ -81,4 +81,29 @@ async function getOldDateCurrency(year, month, day, tcmbCurrencyCode) {
     return result
 }
 
-module.exports = { getAllCurrency, getCurrency, getOldDateAllCurrency, getOldDateCurrency }
+
+
+async function convertCurrency(tcmbCurrencyCode, amount) {
+    try {
+        const allCurrency = await getAllCurrency()
+        const result = allCurrency.find(({ currencyCode }) => currencyCode === tcmbCurrencyCode);
+        result.buying = amount * result.buying
+        result.selling = amount * result.selling
+        console.log(result);
+        return result
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+async function convertOldDateCurrency(year, month, day, tcmbCurrencyCode, amount) {
+    const allCurrency = await getOldDateAllCurrency(year, month, day)
+    const result = allCurrency.find(({ currencyCode }) => currencyCode === tcmbCurrencyCode);
+    result.buying = amount * result.buying
+    result.selling = amount * result.selling
+    console.log(result);
+    return result
+}
+
+module.exports = { getAllCurrency, getCurrency, getOldDateAllCurrency, getOldDateCurrency, convertCurrency, convertOldDateCurrency }
