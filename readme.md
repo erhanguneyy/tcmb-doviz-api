@@ -29,7 +29,7 @@ console.log(result);
 const result = await convertCurrency('USD', 100);
 console.log(result);
 
-// 05.01.2024 tarihinde yayınlanmış USD kuru üzerinden 100TK tutarının alış ve satış değerlerini hesaplar
+// 05.01.2024 tarihinde yayınlanmış USD kuru üzerinden 100TL tutarının alış ve satış değerlerini hesaplar
 const result = await convertOldDateCurrency('2024', '01', '05', 'USD', 100);
 console.log(result);
 
