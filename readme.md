@@ -35,4 +35,4 @@ console.log(result);
 
 ```
 
-** Powered By [EG678 Software](https://www.eg678software.com) **
+**Powered By [EG678 Software](https://www.eg678software.com)**
