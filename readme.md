@@ -34,3 +34,5 @@ const result = await convertOldDateCurrency('2024', '01', '05', 'USD', 100);
 console.log(result);
 
 ```
+
+** Powered By [EG678 Software](https://www.eg678software.com) **
